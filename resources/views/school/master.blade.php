@@ -28,9 +28,16 @@
                 <div class="p-2">
                     <ul class=" list-group">
                         <li class=" list-group-item">
-                            <a class=" list-group-item-action" href="#">
+                            <a class=" list-group-item-action text-decoration-none" href="{{ url('home') }}">
                                 <span class="d-none d-md-block d-lg-block">
-                                    hello
+                                    Dashboard
+                                </span>
+                            </a>
+                        </li>
+                        <li class=" list-group-item">
+                            <a class=" list-group-item-action text-decoration-none" href="{{ url("add/student") }}">
+                                <span class="d-none d-md-block d-lg-block">
+                                    Students
                                 </span>
                             </a>
                         </li>
@@ -38,14 +45,14 @@
                 </div>
             </div>
             <div style="height: 100vh;" class="col-10 bg-info overflow-auto">
-                <nav class=" navbar bg-secondary">
-                    <div class="navbar-brand position-sticky top-0">
+                <nav class="navbar bg-secondary position-sticky top-0">
+                    <div class="navbar-brand">
                         <a href="#" class=" nav-link">
                             <i class="fa-solid fa-bars"></i>
                         </a>
                     </div>
                 </nav>
-                <div class="w-100 bg-danger">
+                <div class="w-100">
                     @yield('school')
                 </div>
             </div>
@@ -54,5 +61,7 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
+@yield('schoolJs')
 </html>
